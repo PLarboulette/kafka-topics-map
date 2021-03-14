@@ -1,5 +1,5 @@
 {
     "name": "kafka-topics-map",
     "main": "server.js",
-    "version": "10"
+    "engines" : { "node" : ">=14.0.0" }
 }

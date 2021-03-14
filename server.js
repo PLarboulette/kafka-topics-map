@@ -1,7 +1,7 @@
 const http = require("http");
 const routes = require("./routes");
 
-const host = 'localhost';
+const host = '0.0.0.0';
 const port = 8080;
 
 const server = http.createServer(routes.requestListener);

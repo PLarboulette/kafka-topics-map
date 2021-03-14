@@ -84,19 +84,28 @@
             "source" : "producer-1",
             "target": "topic-1",
             "symbol": ["none", "arrow"],
-            "symbolSize": 10
+            "symbolSize": 10,
+            "lineStyle" :{
+                "color": "blue"
+            }
         },
         {
             "source" : "producer-2",
             "target": "topic-2",
             "symbol": ["none", "arrow"],
-            "symbolSize": 10
+            "symbolSize": 10,
+            "lineStyle" :{
+                "color": "red"
+            }
         },
         {
             "source" : "producer-3",
             "target": "topic-3",
             "symbol": ["none", "arrow"],
-            "symbolSize": 10
+            "symbolSize": 10,
+            "lineStyle" :{
+                "color": "green"
+            }
         },
         {
             "source" : "producer-4",

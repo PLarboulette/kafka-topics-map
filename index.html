@@ -16,7 +16,7 @@
     // based on prepared DOM, initialize echarts instance
     var myChart = echarts.init(document.getElementById('main'));
     
-    fetch("http://0.0.0.0:8000/data")
+    fetch("https://0.0.0.0:8000/data")
     .then(response => {
         return response.json();
     })

@@ -1,0 +1,5 @@
+{
+    "name": "kafka-topics-map",
+    "main": "server.js",
+    "version": "10"
+}

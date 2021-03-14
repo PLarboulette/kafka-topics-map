@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- including ECharts file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.0.2/echarts.min.js"></script>
+</head>
+
+<body>
+    <!-- preparing a DOM with width and height for ECharts -->
+    <div id="main" style="width:600ox; height:600px;"></div>
+</body>
+
+<script type="text/javascript">
+    
+    // based on prepared DOM, initialize echarts instance
+    var myChart = echarts.init(document.getElementById('main'));
+    
+    fetch("http://localhost:8000/data")
+    .then(response => {
+        return response.json();
+    })
+    .then( data => {
+        var nodes = data.nodes;
+        nodes.map(
+        node => {
+            Object.assign(
+            node, 
+            {
+                x : Math.random() * 300,
+                y: Math.random() * 300
+            }
+            )
+        }
+        );
+        
+        var links = data.links;
+        var categories = data.categories;
+        
+        var option = {
+            title: {
+                text: 'Kafka Toopic Map',
+                subtext: 'Default layout',
+                top: 'bottom',
+                left: 'right'
+            },
+            tooltip: {},
+            legend: [{
+                data: categories.map(function (a) {
+                    return a.name;
+                })
+            }],
+            animationDuration: 1500,
+            animationEasingUpdate: 'quinticInOut',
+            series: [
+            {
+                type: 'graph',
+                name: 'Kafka topics Map',
+                layout: 'force',
+                force: {
+                    repulsion: 100
+                },
+                data: nodes,
+                links: links,
+                categories: categories,
+                roam: true,
+                label: {
+                    position: 'top',
+                    distance: 10,
+                    show: true
+                },
+                labelLayout: {
+                    moveOverlap : 'shiftX'
+                },
+                lineStyle: {
+                    color: 'source',
+                    curveness: 0.3
+                },
+                emphasis: {
+                    focus: 'adjacency',
+                    lineStyle: {
+                        width: 10
+                    }
+                },
+                autoCurveness: true
+            }
+            ]
+        };
+        option && myChart.setOption(option);
+    });
+</script>
+</html>

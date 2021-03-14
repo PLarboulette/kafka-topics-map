@@ -1,0 +1,177 @@
+{
+    "nodes" : [
+        {
+            "id": "topic-1",
+            "name": "Topic1",
+            "symbolSize": 25,
+            "category": 0
+        },
+        {
+            "id": "topic-3",
+            "name": "Topic3",
+            "symbolSize": 25,
+            "category": 0
+        },
+        {
+            "id": "topic-4",
+            "name": "Topic4",
+            "symbolSize": 25,
+            "category": 0
+        },
+        {
+            "id": "producer-1",
+            "name": "Producer1",
+            "symbolSize": 20,
+            "category": 1
+        },
+        {
+            "id": "producer-2",
+            "name": "Producer2",
+            "symbolSize": 20,
+            "category": 1
+        },
+        {
+            "id": "producer-3",
+            "name": "Producer3",
+            "symbolSize": 20,
+            "category": 1
+        },
+        {
+            "id": "producer-4",
+            "name": "Producer4",
+            "symbolSize": 20,
+            "category": 1
+        },
+        {
+            "id": "consumer-1",
+            "name": "Consumer1",
+            "symbolSize": 20,
+            "category": 2
+        },
+        {
+            "id": "consumer-2",
+            "name": "Consumer2",
+            "symbolSize": 20,
+            "category": 2
+        },
+        {
+            "id": "consumer-4",
+            "name": "Consumer4",
+            "symbolSize": 20,
+            "category": 2
+        },
+        {
+            "id": "consumer-5",
+            "name": "Consumer5",
+            "symbolSize": 20,
+            "category": 2
+        },
+        {
+            "id": "topic-2",
+            "name": "Topic2",
+            "symbolSize": 25,
+            "category": 0
+        },
+        {
+            "id": "consumer-3",
+            "name": "Consumer3",
+            "symbolSize": 20,
+            "category": 2
+        }
+    ],
+    "links": [
+        {
+            "source" : "producer-1",
+            "target": "topic-1",
+            "symbol": ["none", "arrow"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "producer-2",
+            "target": "topic-2",
+            "symbol": ["none", "arrow"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "producer-3",
+            "target": "topic-3",
+            "symbol": ["none", "arrow"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "producer-4",
+            "target": "topic-4",
+            "symbol": ["none", "arrow"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "topic-1",
+            "target": "consumer-1",
+            "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "topic-2",
+            "target": "consumer-1",
+            "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "topic-1",
+            "target": "consumer-2",
+            "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "topic-2",
+            "target": "consumer-2",
+            "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "topic-3",
+            "target": "consumer-2",
+            "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "topic-3",
+            "target": "consumer-3",
+            "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "topic-3",
+            "target": "consumer-4",
+            "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "topic-4",
+            "target": "consumer-4",
+            "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "topic-3",
+            "target": "consumer-5",
+            "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        }
+    ],
+    "categories" : [
+        {
+            "name" : "Topic",
+            "symbol": "circle"
+        },
+        {
+            "name" : "Producer",
+            "symbol": "rect"
+        },
+        {
+            "name" : "Consumer",
+            "symbol": "diamond"
+        }
+    ]
+    
+}

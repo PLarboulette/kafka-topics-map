@@ -2,14 +2,14 @@ const services = require("./services");
 const fs = require('fs').promises;
 
 const requestListener = function  (req, res) {
-    res.setHeader("Content-Type", "application/json"); 
     res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader('Access-Control-Request-Method', '*');
 	res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
 	res.setHeader('Access-Control-Allow-Headers', '*');
 
     switch (req.url) {
-        case '/data' : 
+        case '/data' :
+            res.setHeader("Content-Type", "application/json");
             services.getData(res);
             break;
         case "/": 
@@ -22,7 +22,6 @@ const requestListener = function  (req, res) {
             .catch(err => {
                 res.writeHead(500);
                 res.end(err);
-                return;
             });
             break;
     } 

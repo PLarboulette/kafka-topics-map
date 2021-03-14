@@ -14,14 +14,14 @@
 <script type="text/javascript">
     
     // based on prepared DOM, initialize echarts instance
-    var myChart = echarts.init(document.getElementById('main'));
+    const myChart = echarts.init(document.getElementById('main'));
     
-    fetch("https://plarboulette-kafka-topics-map.cleverapps.io/data")
+    fetch("/data")
     .then(response => {
         return response.json();
     })
     .then( data => {
-        var nodes = data.nodes;
+        let nodes = data.nodes;
         nodes.map(
         node => {
             Object.assign(
@@ -34,10 +34,10 @@
         }
         );
         
-        var links = data.links;
-        var categories = data.categories;
-        
-        var option = {
+        let links = data.links;
+        let categories = data.categories;
+
+        let option = {
             title: {
                 text: 'Kafka Toopic Map',
                 subtext: 'Default layout',

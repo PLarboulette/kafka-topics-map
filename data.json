@@ -7,6 +7,12 @@
             "category": 0
         },
         {
+            "id": "topic-2",
+            "name": "Topic2",
+            "symbolSize": 25,
+            "category": 0
+        },
+        {
             "id": "topic-3",
             "name": "Topic3",
             "symbolSize": 25,
@@ -15,6 +21,12 @@
         {
             "id": "topic-4",
             "name": "Topic4",
+            "symbolSize": 25,
+            "category": 0
+        },
+        {
+            "id": "topic-5",
+            "name": "Topic5",
             "symbolSize": 25,
             "category": 0
         },
@@ -43,40 +55,52 @@
             "category": 1
         },
         {
+            "id": "producer-5",
+            "name": "Producer5",
+            "symbolSize": 20,
+            "category": 1
+        },
+        {
             "id": "consumer-1",
             "name": "Consumer1",
             "symbolSize": 20,
-            "category": 2
+            "category": 3
         },
         {
             "id": "consumer-2",
             "name": "Consumer2",
             "symbolSize": 20,
-            "category": 2
-        },
-        {
-            "id": "consumer-4",
-            "name": "Consumer4",
-            "symbolSize": 20,
-            "category": 2
-        },
-        {
-            "id": "consumer-5",
-            "name": "Consumer5",
-            "symbolSize": 20,
-            "category": 2
-        },
-        {
-            "id": "topic-2",
-            "name": "Topic2",
-            "symbolSize": 25,
-            "category": 0
+            "category": 3
         },
         {
             "id": "consumer-3",
             "name": "Consumer3",
             "symbolSize": 20,
+            "category": 3
+        },
+        {
+            "id": "consumer-4",
+            "name": "Consumer4",
+            "symbolSize": 20,
+            "category": 3
+        },
+        {
+            "id": "consumer-5",
+            "name": "Consumer5",
+            "symbolSize": 20,
+            "category": 3
+        },
+        {
+            "id": "kafka-rest",
+            "name": "Kafka REST",
+            "symbolSize": 20,
             "category": 2
+        },
+        {
+            "id": "kafka-connect-1",
+            "name": "Kafka Connect 1",
+            "symbolSize": 20,
+            "category": 4
         }
     ],
     "links": [
@@ -162,9 +186,33 @@
             "symbolSize": 10
         },
         {
+            "source" : "topic-5",
+            "target": "consumer-4",
+            "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        },
+        {
             "source" : "topic-3",
             "target": "consumer-5",
             "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "topic-3",
+            "target": "kafka-connect-1",
+            "symbol": ["arrow", "none"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "kafka-rest",
+            "target": "topic-5",
+            "symbol": ["none", "arrow"],
+            "symbolSize": 10
+        },
+        {
+            "source" : "producer-5",
+            "target": "kafka-rest",
+            "symbol": ["none", "arrow"],
             "symbolSize": 10
         }
     ],
@@ -178,7 +226,15 @@
             "symbol": "rect"
         },
         {
-            "name" : "Consumer",
+            "name" : "Kafka REST",
+            "symbol": "rect"
+        },
+        {
+            "name" : "Consumer App",
+            "symbol": "diamond"
+        },
+        {
+            "name" : "Kafka Connect",
             "symbol": "diamond"
         }
     ]

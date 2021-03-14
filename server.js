@@ -2,7 +2,7 @@ const http = require("http");
 const routes = require("./routes");
 
 const host = 'localhost';
-const port = 8000;
+const port = 8080;
 
 const server = http.createServer(routes.requestListener);
 server.listen(port, host, () => {

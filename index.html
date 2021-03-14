@@ -16,7 +16,7 @@
     // based on prepared DOM, initialize echarts instance
     var myChart = echarts.init(document.getElementById('main'));
     
-    fetch("https://app-ca1cb40a-51ee-49d5-bd49-4b9ec84a4f33.cleverapps.io/data")
+    fetch("https://plarboulette-kafka-topics-map.cleverapps.io/data")
     .then(response => {
         return response.json();
     })

@@ -1,4 +1,4 @@
-const data = require("./data.json");
+const data = require("../data.json");
 
 function getData (res, headers) {
     res.writeHead(200);

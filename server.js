@@ -1,5 +1,5 @@
 const http = require("http");
-const routes = require("./routes");
+const routes = require("./graph/routes");
 
 const host = '0.0.0.0';
 const port = 8080;

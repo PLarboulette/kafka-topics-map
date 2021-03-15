@@ -14,3 +14,8 @@ If you want to modify the data, you have to go to the `data.json`file.
 - The `categories` part let to separate topics, consumers and producers on the graph (color and symbol change thanks to this `category`)(I think you don't have to update that). 
 
 
+## The collector
+
+The `collector.js` file contains some functions which (will) let to get topics and consumer groups thanks to Kafka REST.  
+There are only mocks currently :) 
+The goal is, with this data, to build the `data.json` file. 
